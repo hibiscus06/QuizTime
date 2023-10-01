@@ -1,4 +1,10 @@
 // Define your questions with options and correct answers
+
+window.onload = function()
+{
+    alert("WELCOME TO THE QUIZ !")
+}
+
 const questions = [
     {
         question: "What is the capital of France?",
@@ -41,6 +47,7 @@ const nextButton = document.getElementById('next-button');
 const restartButton = document.getElementById('restart-button');
 const timerElement = document.getElementById('timer');
 
+
 // Function to start the timer for the current question
 function startTimer() {
     let timeRemaining = 30; // 30 seconds per question
@@ -58,6 +65,7 @@ function startTimer() {
 
 // Function to display a question and its options
 function displayQuestion() {
+    
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
     optionsContainer.innerHTML = '';
@@ -125,3 +133,6 @@ restartButton.addEventListener('click', restartQuiz);
 
 // Initialize the quiz by displaying the first question
 displayQuestion();
+
+
+
